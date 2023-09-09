@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <i class="fa-solid fa-house"></i> Chat
+                </div>
+                <div class="card-body">
+                    <div class="chat-container" id="chatContainer">
+                        <!-- Chat messages will be displayed here -->
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="chatMessage" class="form-control" placeholder="Type your message...">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" disabled id="btnSend" type="button">
+                                <i class="fa-solid fa-paper-plane"></i> Send
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts {
+    <script src="~/js/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/chat.js"></script>
+}
